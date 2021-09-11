@@ -1,17 +1,25 @@
 import React from 'react'
 import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import PropTypes from 'prop-types'
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default function Header(props) {
     return (
         <Navbar collapseOnSelect bg="dark" variant="dark" expand="md">
             <Container>
-                <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
+                <LinkContainer to="/">
+                    <Navbar.Brand>{props.title}</Navbar.Brand>
+                </LinkContainer>
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#about">About</Nav.Link>
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/about">
+                            <Nav.Link>About</Nav.Link>
+                        </LinkContainer>
                     </Nav>
 
                     <Nav>
