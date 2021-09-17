@@ -17,7 +17,7 @@ const AddTodo = (props) => {
         }
     }
     return (
-        <div className="container my-3">
+        <div className="container mt-3">
             <Form onSubmit={submit}>
                 <Form.Group className="mb-3" controlId="title">
                     <Form.Label>Todo Title</Form.Label>

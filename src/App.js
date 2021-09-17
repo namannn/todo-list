@@ -10,6 +10,8 @@ import {
   Route
 } from "react-router-dom";
 import About from './Components/About';
+import Headroom from 'react-headroom';
+import { Container } from 'react-bootstrap';
 
 function App() {
 
@@ -51,8 +53,10 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="My Todos" searchBar={true} />
-        
+        <Headroom>
+          <Header title="My Todos" searchBar={true} />
+        </Headroom>
+
         <Switch>
           <Route exact path="/">
             <AddTodo addTodo={addTodo} />
